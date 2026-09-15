@@ -44,7 +44,7 @@ LIMIT 10
 ```
 Berikut adalah hasil dari 10 posisi teratas: 
 
-![Top Paying Data Analyst Jobs](asset\1_top-paying_data_analyst_jobs_.png) 
+![Top Paying Data Analyst Jobs](https://raw.githubusercontent.com/Nadin55/SQL_Project_Data_Job_Analysis/main/asset/1_top-paying_data_analyst_jobs_.png) 
 
 Berdasarkan grafik tersebut menunjukkan bahwa 
 - Pengaruh Tingkat Jabatan (Seniority Level): Sebagian besar posisi bergaji paling tinggi dipegang oleh peran tingkat kepemimpinan (Director, Associate Director) serta kontributor individu senior (Principal Data Analyst).
