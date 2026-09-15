@@ -1,3 +1,7 @@
+/*
+Apa saja skill paling optimal untuk dipelajari?
+Optimal: Permintaan Tinggi (Paling Dicari) DAN Gaji Tinggi
+*/
 SELECT
     skills_dim.skill_id,
     skills_dim.skills,
