@@ -18,6 +18,56 @@ Berikut adalah tools yang digunakan
 3. Git & GitHub: Versi kontrol untuk mengelola repository dan menyajikan hasil analisis portofolio.
 
 # Analisis
+Proyek ini terbagi menjadi 5 tahap analisis utama berdasarkan kueri SQL yang telah dieksekusi:
+### 1. Pekerjaan Gaji Tertinggi (Top-Paying Jobs)
+Menganalisis 10 posisi Data Analyst Remote dengan gaji tahunan tertinggi. Hasil menunjukkan bahwa posisi-posisi teratas menawarkan gaji di atas $100.000+ per tahun, di mana sebagian besar peran ini berfokus pada tingkat senioritas atau spesialisasi industri tertentu.
+
+```sql
+SELECT
+    job_id,
+    job_title,
+    job_location,
+    job_schedule_type,
+    salary_year_avg,
+    job_posted_date,
+    name AS company_name
+from
+    job_postings_fact
+LEFT JOIN company_dim ON job_postings_fact.company_id = company_dim.company_id
+WHERE
+    job_title_short = 'Data Analyst' AND
+    job_location = 'Anywhere' AND
+    salary_year_avg IS NOT NULL
+ORDER BY
+    salary_year_avg DESC
+LIMIT 10
+```
+Berikut adalah hasil dari 10 posisi teratas: 
+
+![Top Paying Data Analyst Jobs](asset\1_top-paying_data_analyst_jobs_.png)
+
+Berdasarkan grafik tersebut menunjukkan bahwa 
+- Pengaruh Tingkat Jabatan (Seniority Level): Sebagian besar posisi bergaji paling tinggi dipegang oleh peran tingkat kepemimpinan (Director, Associate Director) serta kontributor individu senior (Principal Data Analyst).
+- Nilai Spesialisasi Industri: Posisi dengan bidang spesifik seperti Marketing Analytics (Pinterest), Autonomous Vehicles (Motional), Healthcare (UCLA Health), dan Enterprise Risk Management (Get It Recruit) terbukti menawarkan standar gaji yang jauh di atas rata-rata pasar umum.
+- Temuan Outlier (Mantys): Posisi Data Analyst di perusahaan Mantys mencatatkan angka ekstrem sebesar $650.000, yang secara statistik menjadi outlier utama dalam data ini (kemungkinan mencakup kompensasi berbasis saham/ekuitas awal).
+
+### Skill untuk Pekerjaan Bergaji Tinggi (Skills for Top-Paying Jobs) 
+Dengan menggabungkan data 10 pekerjaan tertinggi menggunakan CTE (WITH) dan INNER JOIN, terungkap bahwa lowongan bergaji tinggi tidak hanya meminta skill teknis dasar, tetapi juga kemampuan memproses data berskala besar dan manipulasi cloud.
+
+
+
+
+### Skill Paling Dicari (Most In-Demand Skills)
+
+Menggunakan fungsi agregasi COUNT() dan GROUP BY, analisis pada seluruh postingan kerja Data Analyst menunjukkan bahwa SQL, Excel, dan Python secara konsisten mendominasi posisi 3 teratas sebagai skill wajib bagi seorang Data Analyst.
+
+### Skill Berdasarkan Rata-rata Gaji (Top Skills by Salary)
+
+Menggunakan fungsi AVG(), analisis ini mengevaluasi nilai ekonomis dari tiap skill. Skill bernilai jual paling tinggi cenderung merupakan skill teknis spesifik seperti Big Data tools (misal: PySpark, Databricks) atau bahasa pemrograman analisis tingkat lanjut.
+
+### Skill Paling Optimal (High Demand + High Paying)
+
+Menggabungkan indikator popularitas (COUNT) dan indikator gaji (AVG) dengan filter tambahan HAVING COUNT(...) > 10, analisis ini menemukan skill terbaik untuk dipelajari.
 
 # Apa Yang Dipelajari 
 
