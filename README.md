@@ -86,7 +86,7 @@ order by
 
 Berikut adalah 10 skills dengan pekerjaan bergaji tertinggi
 
-![Skills for Top-Paying Jobs](asset\2_Top_paying_jobs_skills.png) 
+![Skills for Top-Paying Jobs](https://raw.githubusercontent.com/Nadin55/SQL_Project_Data_Job_Analysis/main/asset/2_Top_paying_jobs_skills.png) 
 
 Berdasarkan hasil pemrosesan data terhadap posisi Data Analyst dengan tingkat kompensasi tertinggi ditemukan 3 pola utama kebutuhan industri:
 - SQL dan Python Menjadi Keterampilan Utama Pekerja Bergaji Tertinggi: SQL menduduki posisi pertama sebagai keterampilan yang paling banyak disyaratkan oleh pekerjaan bergaji tertinggi dengan frekuensi 8 kali kemunculan. Sedangkan Python berada di posisi kedua dengan frekuensi 7 kali kemunculan, menunjukkan bahwa penguasaan bahasa pemrosesan data menjadi penentu utama dalam mencapai batas gaji teratas.
@@ -115,7 +115,7 @@ ORDER BY
 LIMIT 5
 ```
 Berikut adalah grafik skill yang paling dicari
-![Most Demanded Skills](asset\3_most_demanded_skills.png) 
+![Most Demanded Skills](https://raw.githubusercontent.com/Nadin55/SQL_Project_Data_Job_Analysis/main/asset/3_most_demanded_skills.png) 
 
 Berdasarkan grafik "Most Demanded Skills in the Data Job Market", berikut adalah 3 poin utama analisis permintaan keterampilan di pasar kerja secara umum 
 
@@ -195,7 +195,7 @@ LIMIT 25;
 ```
 Berikut adalah scatter plot yang memvisualisasikan titik temu antara High Demand dan High Paying
 
-![High Demand vs High Paying](asset\5_optimal_skills_scatter.png)
+![High Demand vs High Paying](https://raw.githubusercontent.com/Nadin55/SQL_Project_Data_Job_Analysis/main/asset/5_optimal_skills_scatter.png)
 
 
 Berdasarkan grafik tersebut menunjukkan: 
